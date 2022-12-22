@@ -1,0 +1,50 @@
+const vegetablesData = [
+  {
+    id: 1,
+    name:"Greenhouse",
+    title:"Cucumber - 1lb",
+    price:"$0.99",
+    url:"",
+    mp:false,
+    bd:false,
+  },
+  {
+    id: 1,
+    name:"BeefSteak Tomatoes",
+    title:"Large - 1lb",
+    price:"$3.99",
+    url:"",
+    mp:true,
+    bd:false,
+  },
+  {
+    id: 1,
+    name:"Red Greenhouse Bell",
+    title:"Pepper - 1lb",
+    price:"$4.49",
+    url:"",
+    mp:false,
+    bd:false,
+  },
+  {
+    id: 1,
+    name:"Lancaster Farm Fresh",
+    title:"Carrots - 1lb",
+    price:"$5.99",
+    url:"",
+    mp:false,
+    bd:false,
+  },
+  {
+    id: 1,
+    name:"Hass Avocados",
+    title:"Reaady-to-eat - 1lb",
+    price:"$2.69",
+    url:"",
+    depPrice:"$2.99",
+    mp:false,
+    bd:true,
+  },
+
+];
+export default vegetablesData
