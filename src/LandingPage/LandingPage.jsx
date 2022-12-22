@@ -62,7 +62,7 @@ const LandingPage = () => {
     }, 5000)
     return ()=>clearTimeout(timer)
   },[bgState])
-
+console.log("hello")
   return (
     <div className="outer ">
       {" "}
