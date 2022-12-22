@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import ThirdComp from "./ThirdComp";
 import CategoryComp from "./CategoryComp";
+import SeventhComp from "./SeventhComp";
 const LandingPage = () => {
   const truck = (
     <svg
@@ -139,6 +140,7 @@ const LandingPage = () => {
       </div>
       <ThirdComp/>
       <CategoryComp/>
+      <SeventhComp/>
     </div>
   );
 };
