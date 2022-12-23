@@ -116,7 +116,7 @@ const Navbar = () => {
           </li>
           {option1 === true ? (
             <div
-              className="options absolute z-10 bg-white px-2 rounded-lg items-center   text-start  flex-col text-base  pt-2"
+              className="options absolute z-10 bg-white px-2 rounded-lg  text-start flex flex-col text-base  pt-2"
               onMouseOver={() => {
                 setOption1(true);
               }}
@@ -125,11 +125,11 @@ const Navbar = () => {
               }}
             >
               {" "}
-              <p className="hover:text-[#EB1414]  cursor-pointer">Vegetables</p>
-              <p className="my-1 hover:text-[#EB1414] cursor-pointer">Fruits</p>
-              <p className="my-1 hover:text-[#EB1414] cursor-pointer">
+              <NavLink to={"/vegetables"} className="hover:text-[#EB1414]  cursor-pointer">Vegetables</NavLink>
+              <NavLink to={"/fruits"}  className="my-1 hover:text-[#EB1414] cursor-pointer">Fruits</NavLink>
+              <NavLink to={"/meat"}  className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Meat & Poultry
-              </p>
+              </NavLink>
               <p className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Fish & Seafood
               </p>
