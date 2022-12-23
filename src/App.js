@@ -9,6 +9,9 @@ import Beverages from './Beverages/Beverages';
 import Household from './Household/Household';
 import PersonalCare from './PersonalCare/PersonalCare';
 import MostPopular from './MostPopular/MostPopular';
+import Fruits from './Food/Fruits';
+import Meat from './Food/Meat';
+import Footer from './Footer/Footer';
 
 function App() {
   return (
@@ -18,12 +21,15 @@ function App() {
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/deals" element={<Deals/>}/>
         <Route path="/vegetables" element={<Vegetables/>}/>
+        <Route path="/fruits" element={<Fruits/>}/>
+        <Route path="/meat" element={<Meat/>}/>
         <Route path="/beverages" element={<Beverages/>}/>
         <Route path="/household" element={<Household/>}/>
         <Route path="/personalCare" element={<PersonalCare/>}/>
         <Route path="/mostPopular" element={<MostPopular/>}/>
        
       </Routes>
+      <Footer/>
     </div>
   );
 }
