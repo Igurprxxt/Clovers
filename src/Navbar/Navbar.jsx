@@ -133,9 +133,9 @@ const Navbar = () => {
               <p className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Fish & Seafood
               </p>
-              <p className="my-1 hover:text-[#EB1414] cursor-pointer">
+              <NavLink to={"/dairy"}  className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Dairy & Eggs
-              </p>
+              </NavLink>
               <p className="my-1 hover:text-[#EB1414] cursor-pointer">Bakery</p>
               <p className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Pasta & Grains

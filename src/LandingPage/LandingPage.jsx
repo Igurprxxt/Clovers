@@ -90,7 +90,7 @@ console.log("hello")
         </div>
       </div>
       <div className="row flex justify-center mt-4 p-4">
-        {/* {<AiOutlineMobile value={{ style: {color:'blue' } }}/>} */}
+        {/* {<AiOutlineMobile className="text-xl" value={{ style: {color:'blue' } }}/>} */}
         <div className="one flex pr-8 text-start border-r border-black">
           <div className="svg fill-[#EB1414] mr-2">{truck}</div>
           <div className="cnt">

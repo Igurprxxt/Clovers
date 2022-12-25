@@ -2,10 +2,14 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
+import Filter from "../components/Filter";
+
 // import Stockdata from '../../public/StockData.json'
 const Vegetables = () => {
   const [data, setData] = useState([]);
   const [count, setCount] = useState(1);
+  const [showCollection, setShowCollection] = useState(false);
+  const [showPrice, setShowPrice] = useState(false);
   useEffect(() => {
     axios.get("/StockData.json").then((res) => {
       setData(res.data.data);
@@ -15,13 +19,14 @@ const Vegetables = () => {
     <div className="outer p-8">
       <div className="header text-7xl font-bold">Vegetables</div>
       <div className="lowercnt flex px-8 pt-8 justify-around">
-        <div className="left w-36 border-2 border-black"> hello</div>
+       
+      <Filter setShowCollection={setShowCollection} showCollection={showCollection} setShowPrice={setShowPrice} showPrice={showPrice}/>
         <div className="rightList flex ">
           {data
             .filter((val) => val.mainId == 1)
             .map((e) => (
               <div
-                className="content border border-slate-500 text-start pb-2 mx-2"
+                className="content border border-slate-500 text-start pb-2 mx-3"
                 key={e.id}
               >
                 {e.mp === true ? (
@@ -66,7 +71,7 @@ const Vegetables = () => {
                   </div>
                 </div>
                 <div className="btn flex justify-center p-2">
-                  <button className="text-white bg-black rounded-full px-4 py-2">
+                  <button className="text-white w-full bg-black rounded-full px-4 py-2">
                     Add to Cart
                   </button>
                 </div>

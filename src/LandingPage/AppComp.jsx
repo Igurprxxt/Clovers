@@ -1,11 +1,11 @@
-import React from 'react'
+// import React from 'react'
 
-const AppComp = () => {
-  return (
-    <div>
-      hello
-    </div>
-  )
-}
+// const AppComp = () => {
+//   return (
+//     <div>
+//       hello
+//     </div>
+//   )
+// }
 
-export default AppComp
+// export default AppComp
