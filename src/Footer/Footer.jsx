@@ -3,6 +3,7 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { CiFacebook } from "react-icons/ci";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { AiFillYoutube } from "react-icons/ai";
+import { NavLink } from "react-router-dom";
 const Footer = () => {
   const cardArray = [
     {
@@ -109,13 +110,13 @@ const Footer = () => {
       <div className="line"><hr/></div>
       <div className="lower p-8 bg-[#EB1414] text-white">
         <div className="links flex justify-around p-8 underline mx-12">
-          <a href="">Shipping & Returns</a>
+          <NavLink  to={"/shipping"}>Shipping & Returns</NavLink>
           <a href="">Terms & Conditions</a>
           <a href="">Payment Methods</a>
         </div>
         <div className="font-semibold text-xl mb-8">We accept the following payment methods</div>
         <div className="cards flex justify-center py-4 ">
-        {cardArray.map((e)=>(<div className="mx-4">
+        {cardArray.map((e)=>(<div className="mx-4" key={e.id}>
           <img src={e.url} alt="" />
         </div>))}
         </div>

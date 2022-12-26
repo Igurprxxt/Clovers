@@ -14,6 +14,11 @@ import Meat from "./Food/Meat";
 import Footer from "./Footer/Footer";
 import Copyright from "./components/Copyright";
 import Dairy from "./Food/Dairy";
+import Bakery from "./Food/Bakery";
+import Cereals from "./Food/Cereals";
+import Pasta from "./Food/Pasta";
+import Fish from "./Food/Fish";
+import ShippingAndReturns from "./ShippingAndReturns";
 
 
 function App() {
@@ -25,12 +30,17 @@ function App() {
         <Route path="/deals" element={<Deals />} />
         <Route path="/vegetables" element={<Vegetables />} />
         <Route path="/fruits" element={<Fruits />} />
-        <Route path="/meat" element={<Meat />} />
+        <Route path="/meat" element={<Meat/>} />
+        <Route path="/fish" element={<Fish/>} />
         <Route path="/dairy" element={<Dairy/>} />
+        <Route path="/bakery" element={<Bakery/>} />
+        <Route path="/pasta" element={<Pasta/>} />
+        <Route path="/cereals" element={<Cereals/>} />
         <Route path="/beverages" element={<Beverages />} />
         <Route path="/household" element={<Household />} />
         <Route path="/personalCare" element={<PersonalCare />} />
         <Route path="/mostPopular" element={<MostPopular />} />
+        <Route path="/shipping" element={<ShippingAndReturns/>} />
       </Routes>
       <Footer />
       <Copyright/>

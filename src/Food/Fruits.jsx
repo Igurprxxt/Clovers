@@ -40,9 +40,10 @@ const Fruits = () => {
                   {e.price}
                 </div>
                 <div className="itemcount flex justify-around border border-slate-800 py-1 mx-2">
-                  <div className="sub cursor-pointer" onClick={(value)=>{
-                   console.log(value.id)
-                          
+                  <div className="sub cursor-pointer" onClick={()=>{
+                   console.log("value.id",e.id)
+                  //  setData()
+                        
                     
                   }}>-</div>
                   <div className="count">{count}</div>

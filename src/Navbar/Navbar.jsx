@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import {AiOutlineSearch} from  'react-icons/ai';
 
 const Navbar = () => {
   const profile = (
@@ -85,8 +86,9 @@ const Navbar = () => {
             placeholder="Search a product e.g. milk"
             className=" px-4 py-1 rounded-full w-80 bg-red-600 text-white placeholder:text-white  font-light mr-2 "
           />
-          <div className="search fill-red-600 bg-white rounded-r-full px-1 ">
-            {search}
+          <div className="search  bg-white rounded-r-full px-1 ">
+        
+           {<AiOutlineSearch className="text-3xl fill-red-600"/>}
           </div>
         </div>
         <div className="right fill-white flex mr-12">
@@ -130,19 +132,19 @@ const Navbar = () => {
               <NavLink to={"/meat"}  className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Meat & Poultry
               </NavLink>
-              <p className="my-1 hover:text-[#EB1414] cursor-pointer">
+              <NavLink to={"/fish"} className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Fish & Seafood
-              </p>
+              </NavLink>
               <NavLink to={"/dairy"}  className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Dairy & Eggs
               </NavLink>
-              <p className="my-1 hover:text-[#EB1414] cursor-pointer">Bakery</p>
-              <p className="my-1 hover:text-[#EB1414] cursor-pointer">
+              <NavLink to={"/bakery"} className="my-1 hover:text-[#EB1414] cursor-pointer">Bakery</NavLink>
+              <NavLink to={"/pasta"} className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Pasta & Grains
-              </p>
-              <p className="my-1 hover:text-[#EB1414] cursor-pointer">
+              </NavLink>
+              <NavLink to={"/cereals"} className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Cereals & Snacks
-              </p>
+              </NavLink>
             </div>
           ) : (
             <div></div>
