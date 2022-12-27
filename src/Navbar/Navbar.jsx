@@ -127,22 +127,22 @@ const Navbar = () => {
               }}
             >
               {" "}
-              <NavLink to={"/vegetables"} className="hover:text-[#EB1414]  cursor-pointer">Vegetables</NavLink>
-              <NavLink to={"/fruits"}  className="my-1 hover:text-[#EB1414] cursor-pointer">Fruits</NavLink>
-              <NavLink to={"/meat"}  className="my-1 hover:text-[#EB1414] cursor-pointer">
+              <NavLink to={"/food/vegetables"} className="hover:text-[#EB1414]  cursor-pointer">Vegetables</NavLink>
+              <NavLink to={"/food/fruits"}  className="my-1 hover:text-[#EB1414] cursor-pointer">Fruits</NavLink>
+              <NavLink to={"/food/meat"}  className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Meat & Poultry
               </NavLink>
-              <NavLink to={"/fish"} className="my-1 hover:text-[#EB1414] cursor-pointer">
+              <NavLink to={"/food/fish"} className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Fish & Seafood
               </NavLink>
-              <NavLink to={"/dairy"}  className="my-1 hover:text-[#EB1414] cursor-pointer">
+              <NavLink to={"/food/dairy"}  className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Dairy & Eggs
               </NavLink>
-              <NavLink to={"/bakery"} className="my-1 hover:text-[#EB1414] cursor-pointer">Bakery</NavLink>
-              <NavLink to={"/pasta"} className="my-1 hover:text-[#EB1414] cursor-pointer">
+              <NavLink to={"/food/bakery"} className="my-1 hover:text-[#EB1414] cursor-pointer">Bakery</NavLink>
+              <NavLink to={"/food/pasta"} className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Pasta & Grains
               </NavLink>
-              <NavLink to={"/cereals"} className="my-1 hover:text-[#EB1414] cursor-pointer">
+              <NavLink to={"/food/cereals"} className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Cereals & Snacks
               </NavLink>
             </div>
@@ -164,7 +164,7 @@ const Navbar = () => {
           </li>
           {option2 === true ? (
             <div
-              className="options absolute z-10 bg-white px-2 rounded-lg items-center  text-start  flex-col text-base  pt-2 "
+              className="options absolute z-10 bg-white px-2 rounded-lg text-start flex flex-col text-base  pt-2 "
               onMouseOver={() => {
                 setOption2(true);
               }}
@@ -173,13 +173,13 @@ const Navbar = () => {
               }}
             >
               {" "}
-              <p className="hover:text-[#EB1414] cursor-pointer">Tea</p>
-              <p className="my-1 hover:text-[#EB1414] cursor-pointer">Coffee</p>
-              <p className="my-1 hover:text-[#EB1414] cursor-pointer">
+              <NavLink to={"/beverages/tea"} className="hover:text-[#EB1414] cursor-pointer">Tea</NavLink>
+              <NavLink to={"/beverages/coffee"} className="my-1 hover:text-[#EB1414] cursor-pointer">Coffee</NavLink>
+              <NavLink to={"/beverages/softDrinks"} className="my-1 hover:text-[#EB1414] cursor-pointer">
                 Soft Drinks
-              </p>
-              <p className="my-1 hover:text-[#EB1414] cursor-pointer">Beer</p>
-              <p className="my-1 hover:text-[#EB1414] cursor-pointer">Wine</p>
+              </NavLink>
+              <NavLink to={"/beverages/beer"} className="my-1 hover:text-[#EB1414] cursor-pointer">Beer</NavLink>
+              <NavLink to={"/beverages/wine"} className="my-1 hover:text-[#EB1414] cursor-pointer">Wine</NavLink>
             </div>
           ) : (
             <div></div>

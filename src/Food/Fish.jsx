@@ -7,6 +7,8 @@ import Filter from "../components/Filter";
 const Fish = () => {
   const [data, setData] = useState([]);
   const [count, setCount] =useState(1)
+  const [mpData, setMpdata]=useState();
+  const [bdData, setBddata]=useState();
   const [showCollection, setShowCollection] = useState(false);
   const [showPrice, setShowPrice] = useState(false);
   useEffect(() => {
@@ -19,7 +21,7 @@ const Fish = () => {
     <div className="outer p-8">
     <div className="header text-7xl font-bold">Fish & Seafood</div>
     <div className="lowercnt flex px-8 pt-8 justify-around">
-    <Filter setShowCollection={setShowCollection} showCollection={showCollection} setShowPrice={setShowPrice} showPrice={showPrice}/>
+    <Filter mpData={mpData} setMpdata={setMpdata} bdData={bdData} setBddata={setBddata} data={data} setData={setData} setShowCollection={setShowCollection} showCollection={showCollection} setShowPrice={setShowPrice} showPrice={showPrice}/>
       <div className="rightList flex ">
         {data
           .filter((val) => val.mainId == 4)
@@ -37,6 +39,7 @@ const Fish = () => {
               <div className="name ml-2">{e.name}</div>
               <div className="title  ml-2">{e.title}</div>
               <div className="price text-[#EB1414] font-bold text-lg my-2 ml-2">
+              <strike className="text-xl mr-1"> {e.depPrice}</strike>
                 {e.price}
               </div>
               <div className="itemcount flex justify-around border border-slate-800 py-1 mx-2">

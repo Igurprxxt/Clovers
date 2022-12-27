@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import ThirdComp from "./ThirdComp";
 import CategoryComp from "./CategoryComp";
 import SeventhComp from "./SeventhComp";
+import DealsComp from "./DealsComp";
 const LandingPage = () => {
   const truck = (
     <svg
@@ -62,7 +63,7 @@ const LandingPage = () => {
     }, 5000)
     return ()=>clearTimeout(timer)
   },[bgState])
-console.log("hello")
+
   return (
     <div className="outer ">
       {" "}
@@ -138,6 +139,7 @@ console.log("hello")
           </div>
         </div>
       </div>
+      <DealsComp/>
       <ThirdComp/>
       <CategoryComp/>
       <SeventhComp/>

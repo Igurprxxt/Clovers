@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Beverages = () => {
+const Tea = () => {
   return (
     <div className='text-black'>
-      Beverages
+      Tea
     </div>
   )
 }
 
-export default Beverages
+export default Tea

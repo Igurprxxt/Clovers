@@ -7,6 +7,7 @@
       "title": "Cucumber - 1lb",
       "price": "$0.99",
       "url": "https://static.wixstatic.com/media/c837a6_4da77aa2a0d64d599c150d9d023a931a~mv2.jpg/v1/fill/w_169,h_225,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c837a6_4da77aa2a0d64d599c150d9d023a931a~mv2.jpg",
+      "depPrice": "",
       "mp": false,
       "bd": false,
       "category": "vegetables"
@@ -18,6 +19,7 @@
       "title": "Large - 1lb",
       "price": "$3.99",
       "url": "https://static.wixstatic.com/media/c837a6_b6904147666f40988c2b7c4bd616982c~mv2.jpg/v1/fill/w_169,h_225,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c837a6_b6904147666f40988c2b7c4bd616982c~mv2.jpg",
+      "depPrice": "",
       "mp": true,
       "bd": false,
       "category": "vegetables"
@@ -29,6 +31,7 @@
       "title": "Pepper - 1lb",
       "price": "$4.49",
       "url": "https://static.wixstatic.com/media/c837a6_7326ce5047ce43be94fa9c7963950913~mv2.jpg/v1/fill/w_169,h_225,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c837a6_7326ce5047ce43be94fa9c7963950913~mv2.jpg",
+      "depPrice": "",
       "mp": false,
       "bd": false,
       "category": "vegetables"
@@ -40,6 +43,7 @@
       "title": "Carrots - 1lb",
       "price": "$5.99",
       "url": "https://static.wixstatic.com/media/c837a6_425b5fac1bc5421eb1308140de5f20db~mv2.jpg/v1/fill/w_169,h_225,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c837a6_425b5fac1bc5421eb1308140de5f20db~mv2.jpg",
+      "depPrice": "",
       "mp": false,
       "bd": false,
       "category": "vegetables"

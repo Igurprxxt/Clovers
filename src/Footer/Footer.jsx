@@ -111,13 +111,13 @@ const Footer = () => {
       <div className="lower p-8 bg-[#EB1414] text-white">
         <div className="links flex justify-around p-8 underline mx-12">
           <NavLink  to={"/shipping"}>Shipping & Returns</NavLink>
-          <a href="">Terms & Conditions</a>
-          <a href="">Payment Methods</a>
+          <NavLink to={"/terms"}>Terms & Conditions</NavLink>
+          <NavLink  to={"/payment"}>Payment Methods</NavLink>
         </div>
         <div className="font-semibold text-xl mb-8">We accept the following payment methods</div>
         <div className="cards flex justify-center py-4 ">
         {cardArray.map((e)=>(<div className="mx-4" key={e.id}>
-          <img src={e.url} alt="" />
+          <img src={e.url} alt="" /> 
         </div>))}
         </div>
       </div>
