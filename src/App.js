@@ -26,7 +26,9 @@ import Coffee from "./Beverages/Coffee";
 import SoftDrinks from "./Beverages/SoftDrinks";
 import Beer from "./Beverages/Beer";
 import Wine from "./Beverages/Wine";
-import DetailsPage from "./Food/DetailsPage";
+import DetailsPage from "./components/DetailsPage";
+
+
 
 function App() {
   return (
@@ -39,7 +41,7 @@ function App() {
         <Route path="/food">
           <Route path="/food/vegetables" element={<Vegetables />} />
           <Route path="/food/fruits" element={<Fruits />} />
-            <Route path="/food/fruits/details/:id" component={DetailsPage}/>
+            <Route path="/food/fruits/details/:fruitId" element={<DetailsPage/>}/>
           {/* </Route> */}
           <Route path="/food/meat" element={<Meat />} />
           <Route path="/food/fish" element={<Fish />} />

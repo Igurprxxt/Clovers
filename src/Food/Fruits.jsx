@@ -11,7 +11,7 @@ const Fruits = () => {
   const [showPrice, setShowPrice] = useState(false);
   const [mpData, setMpdata] = useState([]);
   const [bdData, setBddata] = useState([]);
-  const [filter, setFilter]=useState(false)
+  const [filter, setFilter] = useState(false);
   useEffect(() => {
     axios.get("/StockData.json").then((res) => {
       setData(res.data.data);

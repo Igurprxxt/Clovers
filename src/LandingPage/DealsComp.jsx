@@ -3,6 +3,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { BsChevronLeft } from 'react-icons/bs';
+import { BsChevronRight } from 'react-icons/bs';
 
 const DealsComp = () => {
     const [count, setCount] =useState(1)
@@ -15,25 +17,28 @@ const DealsComp = () => {
       setData1(bb.filter((val) => val.bd === true));
       console.log("data1", data1);
     });
-    // axios.get("/Beverages.json").then((res) => {
-    //     const cc = res.data.data;
+    axios.get("/Beverages.json").then((res) => {
+        const cc = res.data.data;
     
-    //     setData2(cc.filter((e) => e.bd === true));
-    //     console.log("data2", data2);
-    //   });
+        setData2(cc.filter((e) => e.bd === true));
+        console.log("data2", data2);
+      
+      });
   }, []);
 
+const finalData = data1.concat(data2)
 
   return (
     <div className="outer p-8">
-      <div className="heading text-start font-semibold text-4xl mx-12 px-12">
+      <div className="heading text-start  font-semibold text-4xl mx-12 px-12">
         Best Deals
       </div>
+      <div className="flex items-center">
+      <div className="leftArrow">{<BsChevronLeft className="text-4xl"/>}</div>
       <div className="list flex">
-        {data1.map((e)=>( <div className="rightList flex ">
-          {/* {data1
-            .filter((val) => val.mainId == 2)
-            .map((e) => ( */}
+        {finalData.map((e)=>( 
+        <div className="rightList flex  overflow-scroll ">
+        
               <div className="content border border-slate-500 text-start pb-2 mx-3" key={e.id}>
                 {e.mp === true ? <div className="bg-[#EB1414] text-white absolute px-2 rounded-br-lg">
                   Most Popular
@@ -67,7 +72,10 @@ const DealsComp = () => {
                 </div>
               </div>
             {/* ))} */}
-        </div>))}
+        </div>
+        ))}
+      </div>
+      <div className="rightArrow">{<BsChevronRight className="text-4xl"/>}</div>
       </div>
     </div>
   );

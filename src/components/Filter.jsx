@@ -11,7 +11,7 @@ const Filter = ({
 
   setMpdata,
 
-  setBddata
+  setBddata,
 }) => {
   const [range, setRange] = useState();
 
@@ -75,7 +75,9 @@ const Filter = ({
         </div>
         {showPrice === true ? (
           <div className="my-2">
-                  <div className="range text-black rounded-full bg-slate-200 w-min p-1">{range}</div>
+            <div className="range text-black rounded-full bg-slate-200 w-min p-1">
+              {range}
+            </div>
             <input
               type="range"
               min="1.0"
@@ -83,10 +85,8 @@ const Filter = ({
               step="0.2"
               onChange={(e) => {
                 setRange(e.target.value);
-              
               }}
             />
-      
           </div>
         ) : (
           <div></div>
