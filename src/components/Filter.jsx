@@ -8,12 +8,11 @@ const Filter = ({
   showCollection,
   setShowPrice,
   showPrice,
-
-  setMpdata,
-
-  setBddata,
+ filterData,
+ setFilterData
 }) => {
-  const [range, setRange] = useState();
+  const [minRange, setMinRange] = useState(0);
+  const [maxRange, setMaxRange] = useState(0);
 
   return (
     <div className="left text-start flex flex-col">
@@ -36,7 +35,7 @@ const Filter = ({
             <li
               className=""
               onClick={() => {
-                setData(data);
+                setFilterData(data);
               }}
             >
               All
@@ -44,7 +43,7 @@ const Filter = ({
             <li
               className=""
               onClick={() => {
-                setBddata(data.filter((e) => e.bd === true));
+                setFilterData(data.filter((e) => e.bd === true));
               }}
             >
               Deals
@@ -52,7 +51,7 @@ const Filter = ({
             <li
               className=""
               onClick={() => {
-                setMpdata(data.filter((e) => e.mp === true));
+                setFilterData(data.filter((e) => e.mp === true));
               }}
             >
               Most Popular
@@ -75,16 +74,30 @@ const Filter = ({
         </div>
         {showPrice === true ? (
           <div className="my-2">
-            <div className="range text-black rounded-full bg-slate-200 w-min p-1">
-              {range}
+            <div className="range text-black text-sm rounded-full bg-slate-200  p-1">
+               Minimum
+             <span className="ml-6"> {minRange}</span>
             </div>
             <input
               type="range"
               min="1.0"
+              max="8.0"
+              step="0.2"
+              onChange={(e) => {
+                setMinRange(e.target.value);
+              }}
+            />
+            <div className="range text-black text-sm rounded-full bg-slate-200 p-1">
+             Maximum
+             <span className="ml-6"> {maxRange}</span>
+            </div>
+            <input
+              type="range"
+              min="2.0"
               max="10.0"
               step="0.2"
               onChange={(e) => {
-                setRange(e.target.value);
+                setMaxRange(e.target.value);
               }}
             />
           </div>

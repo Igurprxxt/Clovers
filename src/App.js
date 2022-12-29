@@ -42,7 +42,8 @@ function App() {
           <Route path="/food/vegetables" element={<Vegetables />} />
           <Route path="/food/fruits" element={<Fruits />} />
             <Route path="/food/fruits/details/:fruitId" element={<DetailsPage/>}/>
-          {/* </Route> */}
+            <Route path="/food/vegetables/details/:vegetableId" element={<DetailsPage/>}/>
+   
           <Route path="/food/meat" element={<Meat />} />
           <Route path="/food/fish" element={<Fish />} />
           <Route path="/food/dairy" element={<Dairy />} />
@@ -52,7 +53,7 @@ function App() {
         </Route>
         <Route path="/beverages" element={<Beverages />}>
           <Route path="/beverages/tea" element={<Tea />} />
-          <Route path="/beverages/coffee" element={<Coffee />} />
+          <Route path="/beverages/coffee" element={<Coffee/>} />
           <Route path="/beverages/softDrinks" element={<SoftDrinks/>} />
           <Route path="/beverages/beer" element={<Beer />} />
           <Route path="/beverages/wine" element={<Wine />} />

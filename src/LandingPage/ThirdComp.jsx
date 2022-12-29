@@ -17,8 +17,8 @@ const ThirdComp = () => {
         className="left w-[50vw] h-[75vh] text-start pt-[6rem] pl-8 mr-6 rounded-sm pb-2"
         style={bgOne}
       >
-        <div className="ls rounded-full bg-[#EB1414] text-white h-24 w-24 flex items-center absolute left-[36rem] rotate-12">
-    <div className="relative left-4 text-xl">    Limited Supply</div>
+        <div className="ls rounded-full bg-[#EB1414] text-white h-24 w-24 flex items-center absolute left-[38rem] lg:absolute lg:right-[] rotate-12" >
+          <div className="relative left-4 text-xl"> Limited Supply</div>
         </div>
         <div className="text-xl font-semibold mb-2">It's Wine O' Clock!</div>
         <div className="text-4xl font-bold mb-2">Great Deals on</div>

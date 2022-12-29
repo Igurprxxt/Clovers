@@ -6,8 +6,7 @@ import Filter from "../components/Filter";
 const Meat = () => {
     const [data, setData] = useState([]);
   const [count, setCount] =useState(1)
-  const [mpData, setMpdata]=useState();
-  const [bdData, setBddata]=useState();
+  const [filterData, setFilterData] = useState([])
   const [showCollection, setShowCollection] = useState(false);
   const [showPrice, setShowPrice] = useState(false);
   useEffect(() => {
@@ -19,7 +18,7 @@ const Meat = () => {
     <div className="outer p-8">
       <div className="header text-7xl font-bold">Meat & Poultry</div>
       <div className="lowercnt flex px-8 pt-8 justify-around">
-      <Filter mpData={mpData} setMpdata={setMpdata} bdData={bdData} setBddata={setBddata} data={data} setData={setData} setShowCollection={setShowCollection} showCollection={showCollection} setShowPrice={setShowPrice} showPrice={showPrice}/>
+      <Filter filterData={filterData} setFilterData={setFilterData} data={data} setData={setData} setShowCollection={setShowCollection} showCollection={showCollection} setShowPrice={setShowPrice} showPrice={showPrice}/>
         <div className="rightList flex ">
           {data
             .filter((val) => val.mainId == 3)

@@ -9,8 +9,7 @@ const Fruits = () => {
   const [count, setCount] = useState(1);
   const [showCollection, setShowCollection] = useState(false);
   const [showPrice, setShowPrice] = useState(false);
-  const [mpData, setMpdata] = useState([]);
-  const [bdData, setBddata] = useState([]);
+  const [filterData, setFilterData] = useState([])
   const [filter, setFilter] = useState(false);
   useEffect(() => {
     axios.get("/StockData.json").then((res) => {
@@ -22,10 +21,7 @@ const Fruits = () => {
       <div className="header text-7xl font-bold">Fruits</div>
       <div className="lowercnt flex px-8 pt-8 justify-around">
         <Filter
-          mpData={mpData}
-          setMpdata={setMpdata}
-          bdData={bdData}
-          setBddata={setBddata}
+          filterData={filterData} setFilterData={setFilterData}
           data={data}
           setData={setData}
           setShowCollection={setShowCollection}

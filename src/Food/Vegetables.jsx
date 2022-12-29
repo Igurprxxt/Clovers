@@ -3,13 +3,13 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import Filter from "../components/Filter";
+import { NavLink } from "react-router-dom";
 
 // import Stockdata from '../../public/StockData.json'
 const Vegetables = () => {
   const [data, setData] = useState([]);
   const [count, setCount] = useState(1);
-  const [mpData, setMpdata]=useState();
-  const [bdData, setBddata]=useState();
+  const [filterData, setFilterData] = useState([])
   const [showCollection, setShowCollection] = useState(false);
   const [showPrice, setShowPrice] = useState(false);
   useEffect(() => {
@@ -22,7 +22,7 @@ const Vegetables = () => {
       <div className="header text-7xl font-bold">Vegetables</div>
       <div className="lowercnt flex px-8 pt-8 justify-around">
        
-      <Filter mpData={mpData} setMpdata={setMpdata} bdData={bdData} setBddata={setBddata} data={data} setData={setData} setShowCollection={setShowCollection} showCollection={showCollection} setShowPrice={setShowPrice} showPrice={showPrice}/>
+      <Filter filterData={filterData} setFilterData={setFilterData} data={data} setData={setData} setShowCollection={setShowCollection} showCollection={showCollection} setShowPrice={setShowPrice} showPrice={showPrice}/>
         <div className="rightList flex ">
           {data
             .filter((val) => val.mainId == 1)
@@ -45,9 +45,9 @@ const Vegetables = () => {
                 ) : (
                   <div></div>
                 )}
-                <div className="url my-2">
+                <NavLink    to={`/food/vegetables/details/${e.id}`} className="url my-2">
                   <img src={e.url} alt="" />
-                </div>
+                </NavLink>
                 <div className="name ml-2">{e.name}</div>
                 <div className="title  ml-2">{e.title}</div>
                 <div className="price text-[#EB1414] font-bold text-lg my-2 ml-2">

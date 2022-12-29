@@ -1,10 +1,17 @@
 import React from "react";
+// import { Swiper, SwiperSlide } from "swiper/react";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
+// import { Pagination, Navigation } from "swiper";
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
+
+// import "./styles.css";
 
 const DealsComp = () => {
     const [count, setCount] =useState(1)
@@ -28,7 +35,33 @@ const DealsComp = () => {
 
 const finalData = data1.concat(data2)
 
+
   return (
+//     <div className="outer">
+//  <Swiper
+//         slidesPerView={5}
+//         spaceBetween={10}
+//         slidesPerGroup={5}
+//         loop={true}
+//         loopFillGroupWithBlank={true}
+//         pagination={{
+//           clickable: true,
+//         }}
+//         navigation={true}
+//         modules={[Pagination, Navigation]}
+//         className="mySwiper"
+//       >
+//         <SwiperSlide>{finalData[0].url}</SwiperSlide>
+//         <SwiperSlide>{finalData[1].url}</SwiperSlide>
+//         <SwiperSlide>{finalData[2].url}</SwiperSlide>
+//         <SwiperSlide>{finalData[3].url}</SwiperSlide>
+//         <SwiperSlide>{finalData[4].url}</SwiperSlide>
+//         <SwiperSlide>{finalData[5].url}</SwiperSlide>
+//         <SwiperSlide>{finalData[6].url}</SwiperSlide>
+//         <SwiperSlide>{finalData[7].url}</SwiperSlide>
+//         <SwiperSlide>{finalData[8].url}</SwiperSlide>
+//       </Swiper>
+//     </div>
     <div className="outer p-8">
       <div className="heading text-start  font-semibold text-4xl mx-12 px-12">
         Best Deals
@@ -75,7 +108,7 @@ const finalData = data1.concat(data2)
         </div>
         ))}
       </div>
-      <div className="rightArrow">{<BsChevronRight className="text-4xl"/>}</div>
+      {/* <div className="rightArrow">{<BsChevronRight className="text-4xl"/>}</div> */}
       </div>
     </div>
   );

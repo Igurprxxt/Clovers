@@ -8,6 +8,7 @@ import ThirdComp from "./ThirdComp";
 import CategoryComp from "./CategoryComp";
 import SeventhComp from "./SeventhComp";
 import DealsComp from "./DealsComp";
+import OfferPage from "./OfferPage";
 const LandingPage = () => {
   const truck = (
     <svg
@@ -143,6 +144,7 @@ const LandingPage = () => {
       <ThirdComp/>
       <CategoryComp/>
       <SeventhComp/>
+      <OfferPage/>
     </div>
   );
 };
